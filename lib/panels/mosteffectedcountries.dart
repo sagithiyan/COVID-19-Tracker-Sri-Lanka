@@ -42,7 +42,7 @@ class MostAffectedPanel extends StatelessWidget {
             ),
           );
         },
-        itemCount: 6,
+        itemCount: 5,
       ),
     );
   }
