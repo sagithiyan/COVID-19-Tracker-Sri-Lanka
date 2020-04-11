@@ -43,17 +43,9 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          automaticallyImplyLeading: false,
-//          flexibleSpace:SomeWidget(),
-          centerTitle: true,
-          title: Text(
-            'COVID-19 TRCAKER',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-          ),
-        ),
+      appBar: AppBar(
+
+        title: Text('COVIOD-19 Records'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -63,12 +55,12 @@ class _HomepageState extends State<Homepage> {
               height: 90,
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
-              color: Colors.orange[100],
+              color: Colors.brown[100],
               child: Text(DataSource.quote,
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 16)),
+                      fontSize: 22)),
             ),
             Padding(
               padding:

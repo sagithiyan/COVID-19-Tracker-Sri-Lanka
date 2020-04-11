@@ -85,6 +85,13 @@ class _CountryPageState extends State<CountryPage> {
                                     color: Colors.red),
                               ),
                               Text(
+                                'NEW CASES:' +
+                                    countryData[index]['todayCases'].toString(),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.brown),
+                              ),
+                              Text(
                                 'ACTIVE:' +
                                     countryData[index]['active'].toString(),
                                 style: TextStyle(
@@ -105,6 +112,7 @@ class _CountryPageState extends State<CountryPage> {
                                     fontWeight: FontWeight.bold,
                                     color: Colors.grey[800]),
                               ),
+
                             ],
                           ),
                         ))

@@ -10,8 +10,8 @@ void main(){
     theme: ThemeData(
       //appbar
 
-        fontFamily: 'Circular',
-        primaryColor:primaryBlack,
+      fontFamily: 'Circular',
+      primaryColor:primaryBlack,
 
     ),
     home: Homepage(),

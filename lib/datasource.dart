@@ -4,7 +4,7 @@ Color primaryBlack = Color(0xff202c3b);
 
 class DataSource {
   static String quote =
-      "Remember we are not fighting each other ,but we are fighting the virus. We are not enemies ,but the virus is.";
+      "Stay home. Stay safe. Save lives.";
 
   static List questionAnswers = [
     {
