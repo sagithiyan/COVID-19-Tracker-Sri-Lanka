@@ -1,7 +1,7 @@
 import 'package:coronaapp/datasource.dart';
 import 'package:coronaapp/homepage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 void main(){
   //appbar
@@ -10,12 +10,13 @@ void main(){
     theme: ThemeData(
       //appbar
 
-      fontFamily: 'Circular',
-      primaryColor:primaryBlack
+        fontFamily: 'Circular',
+        primaryColor:primaryBlack,
+
     ),
     home: Homepage(),
 
   ));
 
-  
+
 }

@@ -18,7 +18,7 @@ class _HomepageState extends State<Homepage> {
   Map worldData;
   fetchWorldWideData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/countries/sri%20lanka');
+    await http.get('https://corona.lmao.ninja/countries/sri%20lanka');
     setState(() {
       worldData = json.decode(response.body);
     });
@@ -27,7 +27,7 @@ class _HomepageState extends State<Homepage> {
   List countryData;
   fetchcountryData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/countries');
+    await http.get('https://corona.lmao.ninja/countries?sort=cases');
     setState(() {
       countryData = json.decode(response.body);
     });
@@ -60,7 +60,7 @@ class _HomepageState extends State<Homepage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              height: 70,
+              height: 90,
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
               color: Colors.orange[100],
@@ -72,7 +72,7 @@ class _HomepageState extends State<Homepage> {
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -107,12 +107,12 @@ class _HomepageState extends State<Homepage> {
             worldData == null
                 ? CircularProgressIndicator()
                 : WorldwidePanel(
-                    worldData: worldData,
-                  ),
+              worldData: worldData,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                'Affected Countries',
+                'Most Affected Countries',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
@@ -122,22 +122,22 @@ class _HomepageState extends State<Homepage> {
             countryData == null
                 ? Container()
                 : MostAffectedPanel(
-                    countryData: countryData,
-                  ),
+              countryData: countryData,
+            ),
             InfoPanel(),
             SizedBox(
               height: 20,
             ),
             Center(
                 child: Text(
-              'PREVENTION IS BETTER THAN CURE',
-              style: TextStyle(fontSize: 16),
-            )),
+                  'PREVENTION IS BETTER THAN CURE',
+                  style: TextStyle(fontSize: 16),
+                )),
             Center(
                 child: Text(
-              '-SachinSagi-',
-              style: TextStyle(fontSize: 15),
-            )),
+                  '-SachinSagi-',
+                  style: TextStyle(fontSize: 15),
+                )),
             SizedBox(
               height: 50,
             )
