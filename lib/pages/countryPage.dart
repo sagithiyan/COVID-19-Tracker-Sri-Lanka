@@ -84,14 +84,14 @@ class _CountryPageState extends State<CountryPage> {
                             ),
                             Text(
                               'RECOVERED:' +
-                                  countryData[index]['cases'].toString(),
+                                  countryData[index]['recovered'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.green),
                             ),
                             Text(
                               'DEATHS:' +
-                                  countryData[index]['cases'].toString(),
+                                  countryData[index]['deaths'].toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.grey[800]),

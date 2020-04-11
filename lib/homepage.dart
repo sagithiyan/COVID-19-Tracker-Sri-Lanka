@@ -27,7 +27,7 @@ class _HomepageState extends State<Homepage> {
   List countryData;
   fetchcountryData() async {
     http.Response response =
-        await http.get('https://corona.lmao.ninja/countries');
+        await http.get('https://corona.lmao.ninja/countries/USA');
     setState(() {
       countryData = json.decode(response.body);
     });
@@ -112,7 +112,7 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                'Most affected Countries',
+                'Affected Countries',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
