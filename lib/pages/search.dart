@@ -43,12 +43,6 @@ class Search extends SearchDelegate{
         child: Container(
           height: 130,
           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(
-                color: Colors.grey[100],
-                blurRadius: 10,
-                offset: Offset(0, 10)),
-          ]),
           child: Row(
             children: <Widget>[
               Container(
@@ -80,6 +74,13 @@ class Search extends SearchDelegate{
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.red),
+                        ),
+                        Text(
+                          'NEW CASES:' +
+                              suggestionList[index]['todayCases'].toString(),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
                         ),
                         Text(
                           'ACTIVE:' +

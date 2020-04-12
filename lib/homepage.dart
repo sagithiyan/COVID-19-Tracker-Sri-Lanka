@@ -5,6 +5,7 @@ import 'package:coronaapp/pages/countryPage.dart';
 import 'package:coronaapp/panels/infoPanel.dart';
 import 'package:coronaapp/panels/worldwidepanel.dart';
 import 'package:coronaapp/panels/mosteffectedcountries.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -44,7 +45,11 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+          actions: <Widget>[
+      IconButton(icon: Icon(Theme.of(context).brightness==Brightness.light?Icons.lightbulb_outline:Icons.highlight), onPressed: (){
+    DynamicTheme.of(context).setBrightness(Theme.of(context).brightness==Brightness.light?Brightness.dark:Brightness.light);
+    })
+],
         title: Text('COVIOD-19 Records'),
       ),
       body: SingleChildScrollView(

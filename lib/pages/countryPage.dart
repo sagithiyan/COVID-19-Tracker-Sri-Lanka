@@ -46,15 +46,11 @@ class _CountryPageState extends State<CountryPage> {
                   child: Container(
                     height: 130,
                     margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                    decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey[100],
-                          blurRadius: 10,
-                          offset: Offset(0, 10)),
-                    ]),
+
                     child: Row(
                       children: <Widget>[
                         Container(
+                          width: 200,
                           margin: EdgeInsets.symmetric(horizontal: 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +85,7 @@ class _CountryPageState extends State<CountryPage> {
                                     countryData[index]['todayCases'].toString(),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.brown),
+                                    color: Colors.black),
                               ),
                               Text(
                                 'ACTIVE:' +
