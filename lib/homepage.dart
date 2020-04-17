@@ -19,7 +19,7 @@ class _HomepageState extends State<Homepage> {
   Map worldData;
   fetchWorldWideData() async {
     http.Response response =
-    await http.get('https://corona.lmao.ninja/countries/sri%20lanka');
+    await http.get('https://corona.lmao.ninja/v2/countries/sri%20lanka');
     setState(() {
       worldData = json.decode(response.body);
     });
@@ -28,7 +28,7 @@ class _HomepageState extends State<Homepage> {
   List countryData;
   fetchcountryData() async {
     http.Response response =
-    await http.get('https://corona.lmao.ninja/countries?sort=cases');
+    await http.get('https://corona.lmao.ninja/v2/countries?sort=cases');
     setState(() {
       countryData = json.decode(response.body);
     });
