@@ -1,3 +1,5 @@
+import 'package:coronaapp/datasource.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class Search extends SearchDelegate{
@@ -7,6 +9,14 @@ class Search extends SearchDelegate{
   Search(this.countryList);
 
 
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    // TODO: implement appBarTheme
+    return ThemeData(
+      primaryColor: primaryBlack,
+      brightness: DynamicTheme.of(context).brightness
+    );
+  }
 
   @override
   List<Widget> buildActions(BuildContext context) {
